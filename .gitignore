@@ -1,0 +1,12 @@
+*.egg-info
+venv/
+dist/
+build/
+htmlcov/
+coverage.xml
+*.py[co]
+\.*
+!.gitignore
+tests/settings.py
+examples/settings.py
+!.travis.yml
