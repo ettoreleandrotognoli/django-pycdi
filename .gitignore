@@ -10,3 +10,4 @@ coverage.xml
 tests/settings.py
 examples/settings.py
 !.travis.yml
+**.sqlite*
