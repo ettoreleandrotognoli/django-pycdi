@@ -24,6 +24,9 @@ setup(
     license='BSD',
     author=u'Éttore Leandro Tognoli',
     author_email='ettore.leandro.tognoli@gmail.com',
+    install_requires=[
+        'pycdi>=0.0.2'
+    ],
     packages=find_packages(exclude=['tests', 'examples']),
     include_package_data=True,
     keywords=['django', 'pycdi', 'cdi', 'di', 'code dependency injection', 'dependency injection'],
