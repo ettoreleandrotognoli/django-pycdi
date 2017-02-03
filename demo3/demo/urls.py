@@ -19,9 +19,9 @@ from .views import *
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url('^without-injection/$', without_injection),
-    url('^with-injection/(?P<data>.*)$', with_injection),
-    url('^with-request-injection/$', with_request_injection),
-    url('^container-inject/$', container_inject),
-    url('^generic-view/$', GenericView.as_view()),
+    url('^without-injection/$', without_injection, name='without-injection'),
+    url('^with-injection/(?P<data>.*)$', with_injection, name='with-injection'),
+    url('^with-request-injection/$', with_request_injection, name='with-request-injection'),
+    url('^container-inject/$', container_inject, name='container-inject'),
+    url('^generic-view/$', GenericView.as_view(), name='generic-view'),
 ]

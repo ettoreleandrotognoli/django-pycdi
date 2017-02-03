@@ -7,6 +7,7 @@ from django.views.generic import View
 from pycdi import Inject, Producer
 from pycdi.core import CDIContainer
 from pycdi.utils import Singleton
+from pycdi.core import Py2Inject
 
 
 @Singleton()
@@ -23,7 +24,7 @@ def without_injection(request, *args, **kwargs):
     return render(request, 'debug.html', locals())
 
 
-@Inject()
+@Inject(url='data')
 def with_injection(request, data, url: str, singleton: MySingleton, random_number: float):
     return render(request, 'debug.html', locals())
 
@@ -39,9 +40,9 @@ def container_inject(request, container: CDIContainer, number: float):
     return render(request, 'debug.html', locals())
 
 
-@method_decorator(Inject(), name='dispatch')
+@method_decorator(Py2Inject(container=CDIContainer, number=float), name='dispatch')
 class GenericView(View):
-    def get(self, request, container: CDIContainer, number: float):
+    def get(self, request, container, number):
         other_number = container.produce(float)
         singleton = container.produce(MySingleton)
         return render(request, 'debug.html', locals())

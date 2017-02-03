@@ -29,7 +29,7 @@ def with_injection(request, data, url, singleton, **kwargs):
     return render(request, 'debug.html', locals())
 
 
-@Inject(request=HttpRequest, singleton=MySingleton, random_number=float)
+@Inject(HttpRequest, singleton=MySingleton, random_number=float)
 def with_request_injection(request, singleton, random_number):
     return render(request, 'debug.html', locals())
 
