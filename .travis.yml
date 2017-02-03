@@ -5,7 +5,7 @@ python:
   - 3.4
   - pypy
 install:
-  - pip install django codecov
+  - pip install django codecov six
   - python setup.py install
 script: make coverage
 after_success:
