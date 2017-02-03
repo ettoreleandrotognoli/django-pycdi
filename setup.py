@@ -33,7 +33,7 @@ setup(
         'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 3',
         'Development Status :: 2 - Pre-Alpha',
-        'Framework :: DJango',
+        'Framework :: Django',
         'License :: OSI Approved :: BSD License',
     ],
     install_requires=[
