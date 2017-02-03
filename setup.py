@@ -15,7 +15,7 @@ requirements = []
 str_version = '.'.join(map(str, __version__))
 
 setup(
-    name='django_pycdi',
+    name='django-pycdi',
     version=str_version,
     description='DJango with Code Dependency Injection using PyCDI',
     long_description=read('README.rst'),
@@ -24,17 +24,20 @@ setup(
     license='BSD',
     author=u'Éttore Leandro Tognoli',
     author_email='ettore.leandro.tognoli@gmail.com',
-    install_requires=[
-        'pycdi>=0.0.2'
-    ],
-    packages=find_packages(exclude=['tests', 'examples']),
+    packages=find_packages(exclude=['tests', 'demo2', 'demo3']),
     include_package_data=True,
     keywords=['django', 'pycdi', 'cdi', 'di', 'code dependency injection', 'dependency injection'],
     classifiers=[
         'Operating System :: OS Independent',
         'Programming Language :: Python',
-        'Framework :: DJango'
+        'Programming Language :: Python :: 2',
+        'Programming Language :: Python :: 3',
+        'Development Status :: 2 - Pre-Alpha',
+        'Framework :: DJango',
+        'License :: OSI Approved :: BSD License',
     ],
-    # install_requires=requirements,
+    install_requires=[
+        'pycdi>=0.0.2'
+    ],
     # tests_require=[],
 )

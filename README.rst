@@ -1,6 +1,18 @@
 DJango + PyCDI
 ==============
 
+.. image:: https://travis-ci.org/ettoreleandrotognoli/django-pycdi.svg?branch=master
+    :target: https://travis-ci.org/ettoreleandrotognoli/django-pycdi
+
+.. image:: https://codecov.io/gh/ettoreleandrotognoli/django-pycdi/branch/master/graph/badge.svg
+    :target: https://codecov.io/gh/ettoreleandrotognoli/django-pycdi
+
+.. image:: https://badge.fury.io/py/django-pycdi.svg
+    :target: https://badge.fury.io/py/django-pycdi
+
+.. image:: https://img.shields.io/pypi/dm/django-pycdi.svg
+    :target: https://pypi.python.org/pypi/django-pycdi#downloads
+
 A middleware to integrate PyCDI_ with DJango.
 
 
