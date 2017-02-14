@@ -39,7 +39,7 @@ Add middleware to settings.py:
 
 .. code-block :: python
     
-    MIDDLEWARE += 'django_pycdi.middlewares.CDIMiddleware'
+    MIDDLEWARE += ['django_pycdi.middlewares.CDIMiddleware']
 
 
 
