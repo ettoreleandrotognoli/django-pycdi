@@ -37,7 +37,7 @@ setup(
         'License :: OSI Approved :: BSD License',
     ],
     install_requires=[
-        'pycdi>=0.0.2'
+        'pycdi>=0.0.3'
     ],
     # tests_require=[],
 )

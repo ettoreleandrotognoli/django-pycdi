@@ -7,7 +7,6 @@ from django.views.generic import View
 from pycdi import Inject, Producer
 from pycdi.core import CDIContainer
 from pycdi.utils import Singleton
-from pycdi.core import Py2Inject
 
 
 @Singleton()
@@ -40,7 +39,7 @@ def container_inject(request, container: CDIContainer, number: float):
     return render(request, 'debug.html', locals())
 
 
-@method_decorator(Py2Inject(container=CDIContainer, number=float), name='dispatch')
+@method_decorator(Inject(container=CDIContainer, number=float), name='dispatch')
 class GenericView(View):
     def get(self, request, container, number):
         other_number = container.produce(float)
