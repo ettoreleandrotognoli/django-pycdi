@@ -1,4 +1,4 @@
-DJango + PyCDI
+Django + PyCDI
 ==============
 
 .. image:: https://travis-ci.org/ettoreleandrotognoli/django-pycdi.svg?branch=master
@@ -13,7 +13,9 @@ DJango + PyCDI
 .. image:: https://img.shields.io/pypi/dm/django-pycdi.svg
     :target: https://pypi.python.org/pypi/django-pycdi#downloads
 
-A middleware to integrate PyCDI_ with DJango_.
+A middleware to integrate PyCDI_ with Django_.
+
+See the `code of conduct <CODE_OF_CONDUCT.md>`_.
 
 
 Install
@@ -97,4 +99,4 @@ See more ways to use PyCDI_ in its page.
 
 .. _PyCDI: https://github.com/ettoreleandrotognoli/python-cdi
 
-.. _DJango: https://github.com/django/django
+.. _Django: https://github.com/django/django
