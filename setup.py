@@ -37,7 +37,8 @@ setup(
         'License :: OSI Approved :: BSD License',
     ],
     install_requires=[
-        'pycdi>=0.0.3'
+        'pycdi>=0.0.3',
+        'django'
     ],
     # tests_require=[],
 )
