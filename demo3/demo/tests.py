@@ -1,10 +1,13 @@
+from django.conf import settings
 from django.http import HttpRequest
-from pycdi.core import CDIContainer
 from django.shortcuts import resolve_url
 from django.test import Client
 from django.test import TestCase
+from pycdi.core import CDIContainer
 
 from .views import MySingleton
+
+CDI_NAME = getattr(settings, 'CDI_NAME')
 
 DATA = 'some data'
 
@@ -50,3 +53,9 @@ class CDITest(TestCase):
         self.assertIsInstance(context['singleton'], MySingleton)
         self.assertIsInstance(context['number'], float)
         self.assertIsInstance(context['other_number'], float)
+
+    def test_request_cdi(self):
+        response = self.client.get(resolve_url('with-injection', data=DATA))
+        self.assertEqual(response.status_code, 200)
+        context = response.context
+        self.assertIsNotNone(getattr(context['request'], CDI_NAME))

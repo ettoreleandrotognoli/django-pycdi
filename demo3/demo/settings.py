@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 
 import os
+import random
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -23,6 +24,8 @@ SECRET_KEY = 't2u3^&_quk=zhw$f_btgihc!q(=ubw*t51o95yquczo0oehx*h'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+
+CDI_NAME = ''.join(random.choices([chr(i) for i in range(97, 97 + 26)] + ['_'], k=16))
 
 ALLOWED_HOSTS = []
 
