@@ -1,8 +1,8 @@
 language: python
 sudo: false
 env:
-  - DJANGO_VERSION=2.0.*
-  - DJANGO_VERSION=1.11.*
+  - DJANGO_VERSION=2.0
+  - DJANGO_VERSION=1.11
 python:
   - 2.7
   - 3.6
@@ -10,9 +10,9 @@ python:
 matrix:
   exlude:
     - python: 2.7
-      env: DJANGO_VERSION=2.0.*
+      env: DJANGO_VERSION=2.0
     - python: pypy
-      env: DJANGO_VERSION=2.0.*
+      env: DJANGO_VERSION=2.0
 install:
   - pip install django==$DJANGO_VERSION
   - pip install codecov six
