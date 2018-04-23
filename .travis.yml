@@ -9,9 +9,9 @@ python:
   - pypy
 matrix:
   exlude:
-    - python: "2.7"
+    - python: 2.7
       env: DJANGO_VERSION=2.0.*
-    - python: "pypy"
+    - python: pypy
       env: DJANGO_VERSION=2.0.*
 install:
   - pip install django==$DJANGO_VERSION
